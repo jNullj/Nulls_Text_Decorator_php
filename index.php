@@ -20,7 +20,7 @@ $dec = new Decorator;
                 ?>
                 Enter your text here → <input type="text" name="input" value="<?=$_POST["input"]; ?>" />
                 <br />
-                Circled text: <input type="text" name="cool1" value="<?=dec->cycle($_POST["input"]); ?>" />
+                Circled text: <input type="text" name="cool1" value="<?=$dec->cycle($_POST["input"]); ?>" />
                 <?php
         }
         else
