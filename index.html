@@ -18,9 +18,9 @@ $dec = new Decorator();
                 <br />
                 <form action="index.html" method="post">
                 <br />
-                Enter your text here → <input type="text" name="input" value="<?php echo $_POST["input"]; ?>" />
+                Enter your text here → <input type="text" name="input" value="<?=$_POST["input"]; ?>" />
                 <br />
-                Circled text: <input type="text" name="cool1" value="<?php echo dec->cycle($_POST["input"]); ?>" />
+                Circled text: <input type="text" name="cool1" value="<?=dec->cycle($_POST["input"]); ?>" />
                 <br />
                 <input type="submit" name="step2" />
                 </form>
