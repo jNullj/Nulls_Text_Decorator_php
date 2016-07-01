@@ -7,25 +7,28 @@ class Decorator {
   private $origin;
   
   function __construct(){
-    $upper = range('A', 'Z');
-    $lower = range('a', 'z');
-    $nums = range('0','9');
-    $origin = $lower + $upper + $nums;
+    $this->upper = range('A', 'Z');
+    $this->lower = range('a', 'z');
+    $this->nums = range('0','9');
+    $this->origin = array_merge($this->lower, $this->upper, $this->nums);
   }
   
   public function cycle($text){
-    $id_upper = range(9398,9423);
-    $id_lower = range(9324,9449);
-    $id_nums = [9450] + range(9312,9320);
-    $id = $id_lower + $id_upper + $id_nums;
-    $map = [];
+    $id_upper = range(hexdec('24B6'),hexdec('24CF'));
+    $id_lower = range(hexdec('24D0'),hexdec('24E9'));
+    $id_nums = array_merge([hexdec('24EA')],range(hexdec('2460'),hexdec('2468')));
+    $id = array_merge($id_lower, $id_upper, $id_nums);
+    foreach($id as $key => $val){
+      $id[$key] = dechex($val);
+    }
+    $map = array();
     foreach($id as $val)
     {
       $myval = "\u{$val}";
-      $myval = json_decode($myval);
-      $map = $map + [$myval];
+      $myval = json_decode('"'.$myval.'"');
+      array_push($map, $myval);
     }
-    return str_replace($original, $map, $text);
+    return str_replace($this->origin, $map, $text);
   }
 }
 
