@@ -1,6 +1,6 @@
 <?php
-require_once(decorator.php);
-$dec = new Decorator();
+require_once('decorator.php');
+$dec = new Decorator;
 ?>
 
 <!DOCTYPE html>
@@ -12,7 +12,7 @@ $dec = new Decorator();
     <body>
         <h1>Null's Text Decorator</h1>
         <br />
-        <form action="index.html" method="post">
+        <form action="index.php" method="post">
         <br />
         <?php
         if (isset($_POST["step2"]))
