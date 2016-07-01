@@ -10,37 +10,30 @@ $dec = new Decorator();
         <title>Null's Text Decorator</title>
     </head>
     <body>
+        <h1>Null's Text Decorator</h1>
+        <br />
+        <form action="index.html" method="post">
+        <br />
         <?php
         if (isset($_POST["step2"]))
         {
                 ?>
-                <h1>Null's Text Decorator</h1>
-                <br />
-                <form action="index.html" method="post">
-                <br />
                 Enter your text here → <input type="text" name="input" value="<?=$_POST["input"]; ?>" />
                 <br />
                 Circled text: <input type="text" name="cool1" value="<?=dec->cycle($_POST["input"]); ?>" />
-                <br />
-                <input type="submit" name="step2" />
-                </form>
                 <?php
         }
         else
         {
                 ?>
-                <h1>Null's Text Decorator</h1>
-                <br />
-                <form action="index.html" method="post">
-                <br />
                 Enter your text here → <input type="text" name="input" />
                 <br />
                 Circled text: <input type="text" name="cool1" />
-                <br />
-                <input type="submit" name="step2" />
-                </form>
                 <?php
         }
         ?>
+        <br />
+        <input type="submit" name="step2" />
+        </form>
     </body>
 </html>
