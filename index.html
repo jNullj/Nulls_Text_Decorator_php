@@ -1,3 +1,8 @@
+<?php
+require_once(decorator.php);
+$dec = new Decorator();
+?>
+
 <!DOCTYPE html>
 <html>
     <head>
@@ -15,7 +20,7 @@
                 <br />
                 Enter your text here → <input type=\"text\" name=\"input\" value=\"". $_POST["input"] ."\" />
                 <br />
-                Circled text: <input type=\"text\" name=\"cool1\" value=\"". /* OUTPUT */ ."\" />
+                Circled text: <input type=\"text\" name=\"cool1\" value=\"". dec.($_POST["input"]) ."\" />
                 <br />
                 <input type=\"submit\" name=\"step2\" />
                 </form>
