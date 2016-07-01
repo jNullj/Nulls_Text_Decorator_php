@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <title>Null's Text Decorator</title>
+    </head>
+    <body>
+        <?php
+        if (isset($_POST["step2"]))
+        {
+                echo "
+                <h1>Null's Text Decorator</h1>
+                <br />
+                <form action=\"index.php\" method=\"post\">
+                <br />
+                Enter your text here → <input type=\"text\" name=\"input\" value=\"". $_POST["input"] ."\" />
+                <br />
+                Circled text: <input type=\"text\" name=\"cool1\" value=\"". /* OUTPUT */ ."\" />
+                <br />
+                <input type=\"submit\" name=\"step2\" />
+                </form>
+                ";
+        }
+        else
+        {
+            echo "
+                <h1>Null's Text Decorator</h1>
+                <br />
+                <form action=\"index.php\" method=\"post\">
+                <br />
+                Enter your text here → <input type=\"text\" name=\"input\" />
+                <br />
+                Circled text: <input type=\"text\" name=\"cool1\" />
+                <br />
+                <input type=\"submit\" name=\"step2\" />
+                </form>
+                ";
+        }
+        ?>
+    </body>
+</html>
