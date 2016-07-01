@@ -6,7 +6,7 @@ class Decorator {
   private $nums;
   private $origin;
   
-  void __construct(){
+  function __construct(){
     $upper = range('A', 'Z');
     $lower = range('a', 'z');
     $nums = range('0','9');
