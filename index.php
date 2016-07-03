@@ -21,6 +21,8 @@ $dec = new Decorator;
                 Enter your text here → <input type="text" name="input" value="<?=$_POST["input"]; ?>" />
                 <br />
                 Circled text: <input type="text" name="cool1" value="<?=$dec->cycle($_POST["input"]); ?>" />
+                <br />
+                Leet text: <input type="text" name="cool1" value="<?=$dec->leet($_POST["input"]); ?>" />
                 <?php
         }
         else
@@ -29,6 +31,8 @@ $dec = new Decorator;
                 Enter your text here → <input type="text" name="input" />
                 <br />
                 Circled text: <input type="text" name="cool1" />
+                <br />
+                Leet text: <input type="text" name="cool1" />
                 <?php
         }
         ?>
