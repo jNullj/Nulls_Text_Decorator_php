@@ -30,6 +30,12 @@ class Decorator {
     }
     return str_replace($this->origin, $map, $text);
   }
+  
+  public function leet($text){
+      $from =   ['a','e','g','i','o','s','t','A','E','G','I','O','S','T'];
+      $to =     ['4','3','6','1','0','5','7','4','3','6','1','0','5','7'];
+      return str_replace($from, $to, $text);
+  }
 }
 
 ?>
