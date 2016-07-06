@@ -29,11 +29,6 @@ $dec = new Decorator;
         {
                 ?>
                 Enter your text here → <input type="text" name="input" />
-                <br />
-                Circled text: <input type="text" name="cool1" />
-                <br />
-                Leet text: <input type="text" name="cool1" />
-                <?php
         }
         ?>
         <br />
