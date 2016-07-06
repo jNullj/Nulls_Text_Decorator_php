@@ -20,9 +20,9 @@ $dec = new Decorator;
                 ?>
                 Enter your text here → <input type="text" name="input" value="<?=$_POST["input"]; ?>" />
                 <br />
-                Circled text: <input type="text" name="cool1" value="<?=$dec->cycle($_POST["input"]); ?>" />
+                Circled text: <input type="text" name="cool1" value="<?=$dec->cycle($_POST["input"]); ?>" readonly />
                 <br />
-                Leet text: <input type="text" name="cool1" value="<?=$dec->leet($_POST["input"]); ?>" />
+                Leet text: <input type="text" name="cool1" value="<?=$dec->leet($_POST["input"]); ?>" readonly />
                 <?php
         }
         else
