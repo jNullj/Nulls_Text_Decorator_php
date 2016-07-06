@@ -29,6 +29,7 @@ $dec = new Decorator;
         {
                 ?>
                 Enter your text here → <input type="text" name="input" />
+                <?php
         }
         ?>
         <br />
