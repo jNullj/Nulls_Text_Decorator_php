@@ -1,0 +1,30 @@
+/* 
+    Created on : 14/09/2016, 16:24:40
+    Author     : jNullj
+*/
+
+
+body{
+    background-color: #545454;
+    color: whitesmoke;
+}
+#header{
+    text-align: center;
+}
+#header h1{
+    color: white;
+    text-shadow: white 0 0 12px;
+    font-size: 300%;
+}
+#main{
+    width: 100%;
+    text-align: center;
+}
+#main table{
+    text-align: left;
+    margin-left: auto;
+    margin-right: auto;
+}
+.submit{
+    text-align: center;
+}
