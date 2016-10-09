@@ -36,6 +36,21 @@ class Decorator {
       $to =     ['4','3','6','1','0','5','7','4','3','6','1','0','5','7'];
       return str_replace($from, $to, $text);
   }
+  
+  public function parenthesized($text){
+      $unicode_parent = range(hexdec('249C'),  hexdec('24B5'));
+      foreach($unicode_parent as $key => $val){
+        $unicode_parent[$key] = dechex($val);
+      }
+      $map = array();
+      foreach($unicode_parent as $val)
+      {
+        $myval = "\u{$val}";
+        $myval = json_decode('"'.$myval.'"');
+        array_push($map, $myval);
+      }
+      return str_replace($this->lower, $map, $text);
+  }
 }
 
 ?>

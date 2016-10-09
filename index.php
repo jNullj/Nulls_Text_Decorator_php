@@ -29,6 +29,8 @@ $dec = new Decorator;
                             Circled text: </th><th><input type="text" name="cool1" value="<?=$dec->cycle($_POST["input"]); ?>" readonly /></th>
                     </tr><tr><th>
                             Leet text: </th><th><input type="text" name="cool1" value="<?=$dec->leet($_POST["input"]); ?>" readonly /></th>
+                     </tr><tr><th>
+                             Parenthesized text: </th><th><input type="text" name="cool1" value="<?=$dec->parenthesized($_POST["input"]); ?>" readonly /></th>
                     </tr>
                             <?php
                     }
